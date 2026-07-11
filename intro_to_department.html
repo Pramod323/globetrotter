@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Geography Department, KMC</title>
+<link rel="icon" type="image/jpg" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        background: #ece2d0;
+    }
+
+    /* Top Navbar */
+    .navbar {
+        background: #6d380c;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+	border-bottom: 1px solid white;
+
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+    .navbar h2 {
+        font-size: 13px;
+        margin: 0;
+    }
+	
+    #logo {
+	width: 70px;
+	height: 70px;
+    }
+
+    #logo2 {
+	width:40px;
+	height:40px;
+	padding:3px;
+   }
+
+   #logo3 {
+	width: 55px;
+	height: 55px;
+    }
+
+    #social_media_handles {
+	padding:20px;
+    }
+
+    .dropdown{
+	margin-left: auto;
+    }
+
+    .dropdown img{
+	cursor: pointer;
+    }
+
+    #dropdown-items div{
+	background: #8D4422;
+        color: white;
+        padding: 6px 60px;
+        font-size: 14px;
+        letter-spacing: 3px;
+	border-bottom: 1px solid white;
+    }
+
+    #dropdown-items div a{
+        color: white;
+        font-size: 14px;
+        letter-spacing: 3px;
+	text-decoration: none;
+    }
+
+    #dropdown-items div p{
+	margin:0;
+    }
+
+    #dropdown-items div a p{
+	padding-left: 40px;
+    }
+
+    #dropdown-items div div {
+	border-bottom: 0px;
+	padding: 0;
+    }
+
+    .home-dropdown {
+	display: none;
+    }
+
+    .home:hover .home-dropdown {
+    	display: block;
+    }
+
+    /* Banner */
+    .banner {
+        background: linear-gradient(to right, #ab6246, #C05746);
+        color: white;
+        padding: 12px 60px;
+        font-size: 28px;
+        letter-spacing: 3px;
+	border-bottom: 1px solid white;
+    }
+
+    .banner p {
+	margin:0;
+	padding-top: 7px;
+    }
+
+    /* Main Layout */
+    .container {
+        display: flex;
+	flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 350px;
+        background: #2c4b5e;
+        color: white;
+	border-radius: 10px;
+	height: min-content;
+	margin-right: 20px;
+	margin-bottom: 20px;
+    }
+
+    .sidebar a {
+	color: white;
+	text-decoration: none;
+    }
+
+    .sidebar div {
+        padding: 15px;
+        border-bottom: 1px solid #3e6277;
+    }
+
+    .sidebar div:hover {
+        background: #3f6b84;
+	cursor: pointer;
+	border-radius: 10px;
+    }
+
+    /* Content */
+    .content {
+        flex: 1;
+        background: white;
+        padding: 30px;
+	border-radius: 20px;
+    }
+
+    .content h2 {
+        margin-top: 0;
+        font-weight: normal;
+    }
+
+    .content p {
+        line-height: 1.6;
+    }
+
+    .content b {
+        display: block;
+        margin-top: 15px;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div>
+	<a href='index.html'><img id = 'logo' src='logo_without_bg.png'/></a>
+    </div>
+    <div id='name'>
+	<h1>DEPARTMENT OF GEOGRAPHY,</h1>
+	<h2>KIRORI MAL COLLEGE</h2>
+    </div>
+    <div id='social_media_handles'>
+	<a href='mailto:deptofgeo.kmc@gmail.com'><img id = 'logo2' src='gmail.png'/></a>
+	<a href='https://www.instagram.com/kmc_geography/'><img id = 'logo2' src='insta.webp'/></a>
+	<a href='https://in.linkedin.com/company/geography-kmc'><img id = 'logo2' src='linkedin.png'/></a>
+    </div>
+
+    <div class = 'dropdown'>
+	<img src='hamburger_menu.png' id='logo3' onClick="toggleDropDown()"/>
+    </div>
+</div>
+
+<script>
+    function toggleDropDown() {
+	const dropdown = document.getElementById('dropdown-items');
+        if (dropdown.style.display === 'none') {
+	    dropdown.style.display = 'block'
+	} else {
+	    dropdown.style.display = 'none'
+	};
+    }
+</script>
+
+<div id = 'dropdown-items' style = "display: none">
+    <div class = 'home'>
+	<p>⏷HOME</p>
+	<div class = 'home-dropdown'>
+	<a href="intro_to_department.html"><p style = 'padding-top: 10px'>›INTRODUCTION TO THE GEOGRAPHY DEPARTMENT</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+        <a href="alumni.html"><p>›ALUMNI</p></a>
+        <a href="departmentcrest.html"><p>›DEPARTMENT CREST</p></a>
+        <a href="vision.html"><p>›VISION AND MISSION</p></a>
+        <a href="college.html"><p>›AFFILIATING COLLEGE</p></a>
+        <a href="uni.html"><p>›AFFILIATING UNIVERSITY</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMISSION</p>
+	<div class = 'home-dropdown'>
+	<a href="collegeprospectus.html"><p style = 'padding-top: 10px'>›COLLEGE PROSPECTUS</p></a>
+        <a href="procedure.html"><p>›PROCEDURE</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMINSTRATION</p>
+	<div class = 'home-dropdown'>
+	<a href="departmentstaff.html"><p style = 'padding-top: 10px'>›DEPARTMENT STAFF</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+	</div>
+    </div>
+    
+    <div class = 'home'>
+	<p>⏷ACADEMICS</p>
+	<div class = 'home-dropdown'>
+	<a href="academiccalendar.html"><p style = 'padding-top: 10px'>›ACADEMIC CALENDAR</p></a>
+        <a href="syllabus.html"><p>›SYLLABUS</p></a>
+	<a href="timetable.html"><p>›TIME TABLE</p></a>
+	</div>
+    </div>
+
+    
+
+    <div><a href='news.html'>⏷NEWS</a></div>
+
+    <div class = 'home'>
+	<p>⏷GALLERY</p>
+	<div class = 'home-dropdown'>
+	<a href="gallery_council.html"><p style = 'padding-top: 10px'>›SELECTION OF STUDENT COUNCIL</p></a>
+        <a href="gallery_td.html"><p>›TEACHER'S DAY</p></a>
+	<a href="gallery_geo_olympics.html"><p>›GEO-OLYMPICS</p></a>
+	<a href="gallery_geo_time.html"><p>›GEO-TIME</p></a>
+	</div>
+    </div>
+
+    <div><a href='contactus.html'>⏷CONTACT US</a></div>
+</div>
+
+
+<!-- Banner -->
+<div class="banner">
+    <p>HOME</p>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="intro_to_department.html"><div>INTRODUCTION TO THE GEOGRAPHY DEPARTMENT</div></a>
+        <a href="council.html"><div>DEPARTMENT COUNCIL</div></a>
+        <a href="alumni.html"><div>ALUMNI</div></a>
+        <a href="departmentcrest.html"><div>DEPARTMENT CREST</div></a>
+        <a href="vision.html"><div>VISION AND MISSION</div></a>
+        <a href="college.html"><div>AFFILIATING COLLEGE</div></a>
+        <a href="uni.html"><div style="border: 0;">AFFILIATING UNIVERSITY</div></a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>ABOUT THE DEPARTMENT</h2>
+        <hr>
+
+        <p>
+           The Department of Geography, Kirori Mal College, is one of the most vibrant  departments of the college. The department has completed 67 glorious years since its  establishment in 1959. It has emerged as an epitome of knowledge.  The departmental research activities focus on exploring contemporary issues while offering a  holistic perspective of knowledge to the students. The department has a 3 labs and centre of Himalayan studies, which offer students state-of-the art hands-on training.
+        </p>
+
+        <b>Pursuit of Excellence:</b>
+        <p>
+	To inculcate all-round development and to facilitate skill enhancement and learning among the  students, the department regularly organizes field visits, conferences, workshops, seminars,  and a career fair, where students receive first-hand experience and learn empirically from  different spheres of life. The graduates passing out from the department work in various  capacities at multinational companies, consulting firms, the banking sector, urban planning,  civil services, teaching, academia, climate policy and action, global diplomacy consulting,  environmental management, social policymaking, NGOs, etc.
+        </p>
+
+        <b>Events</b>
+        <p>
+            The Department has a Geography Association that has remained active in imparting up-to-date  knowledge on contemporary issues through activities like special lectures, workshops, and  training courses. The Geography Association also celebrates its annual Geo-Fest, namely  ‘GEOTIME’, in which Kirori Mal College students organise the inter-college competitions like Flag trivia, Map pointer, Debate, Essay writing and many more activities based on geographical knowledge. Every year  ‘Landscape’, an annual geographical magazine, is brought out by the department to showcase  and promote the talent of young geographers. Students are also taken on educational and field  visits to expose them to changing ground realities in both the physical and human landscapes,  along with field survey techniques like remote sensing and GIS at various stages from training  to research applications.
+
+        <b>Total Development of Personality:</b>
+        <p>
+            Noteworthy, Geography is best suited for students who have a knack for both the Humanities  and Science streams, as the discipline is very well integrated. The discipline has a wide scope,  and the Geography Department at KMC is committed to offering the best learning  environment. 
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
