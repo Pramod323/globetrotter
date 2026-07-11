@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Geography Department, KMC</title>
+<link rel="icon" type="image/jpg" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background: #ece2d0;
+}
+
+/* Top Navbar */
+    .navbar {
+        background: #6d380c;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+	border-bottom: 1px solid white;
+
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+    .navbar h2 {
+        font-size: 13px;
+        margin: 0;
+    }
+
+ #logo {
+	width: 70px;
+	height: 70px;
+    }
+
+    #logo2 {
+	width:40px;
+	height:40px;
+	padding:3px;
+   }
+
+   #logo3 {
+	width: 55px;
+	height: 55px;
+    }
+
+#social_media_handles { padding: 20px; }
+
+.dropdown{
+	margin-left: auto;
+    }
+
+    .dropdown img{
+	cursor: pointer;
+    }
+
+#dropdown-items div{
+	background: #8D4422;
+        color: white;
+        padding: 6px 60px;
+        font-size: 14px;
+        letter-spacing: 3px;
+	border-bottom: 1px solid white;
+    }
+
+#dropdown-items div a{
+        color: white;
+        font-size: 14px;
+        letter-spacing: 3px;
+	text-decoration: none;
+    }
+
+#dropdown-items div p { margin: 0; }
+
+#dropdown-items div p{
+	margin:0;
+    }
+
+    #dropdown-items div a p{
+	padding-left: 40px;
+    }
+
+    #dropdown-items div div {
+	border-bottom: 0px;
+	padding: 0;
+    }
+
+    .home-dropdown {
+	display: none;
+    }
+
+    .home:hover .home-dropdown {
+    	display: block;
+    }
+
+/* MARQUEE */
+.marquee {
+    background: #6d380c;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.marquee a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.marquee a:hover {
+    text-decoration: underline;
+}
+
+/* 70-30 SECTION */
+.container {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.left-section { width: 70%; }
+
+.left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right-section {
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.right-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* PRINCIPAL SECTION */
+.principal-section {
+    display: flex;
+    padding: 50px;
+    background: #f3e8d9;
+}
+
+.principal-left {
+    width: 30%;
+    text-align: center;
+}
+
+.principal-left img {
+    width: 80%;
+    border-radius: 15px;
+}
+
+.principal-left h3 {
+    margin: 10px 0 0;
+}
+
+.principal-left p {
+    color: #6d380c;
+    font-size: 14px;
+}
+
+.principal-right {
+    width: 70%;
+    padding-left: 40px;
+}
+
+.principal-right h1 {
+    color: #5a1f0e;
+    margin-bottom: 10px;
+}
+
+.principal-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.button-group {
+    margin-top: 15px;
+}
+
+.btn {
+    background: #6d380c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div>
+        <a href='index.html'><img id='logo' src='logo_without_bg.png'/></a>
+    </div>
+
+    <div id='name'>
+        <h1>DEPARTMENT OF GEOGRAPHY,</h1>
+        <h2>KIRORI MAL COLLEGE</h2>
+    </div>
+
+    <div id='social_media_handles'>
+        <a href='mailto:deptofgeo.kmc@gmail.com'><img id='logo2' src='gmail.png'/></a>
+        <a href='https://www.instagram.com/kmc_geography/'><img id='logo2' src='insta.webp'/></a>
+        <a href='https://in.linkedin.com/company/geography-kmc'><img id='logo2' src='linkedin.png'/></a>
+    </div>
+
+    <div class='dropdown'>
+        <img src='hamburger_menu.png' id='logo3' onClick="toggleDropDown()"/>
+    </div>
+</div>
+
+<script>
+function toggleDropDown() {
+    const dropdown = document.getElementById('dropdown-items');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+<!-- Dropdown -->
+<div id = 'dropdown-items' style = "display: none">
+    <div class = 'home'>
+	<p>⏷HOME</p>
+	<div class = 'home-dropdown'>
+	<a href="intro_to_department.html"><p style = 'padding-top: 10px'>›INTRODUCTION TO THE GEOGRAPHY DEPARTMENT</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+        <a href="alumni.html"><p>›ALUMNI</p></a>
+        <a href="departmentcrest.html"><p>›DEPARTMENT CREST</p></a>
+        <a href="vision.html"><p>›VISION AND MISSION</p></a>
+        <a href="college.html"><p>›AFFILIATING COLLEGE</p></a>
+        <a href="uni.html"><p>›AFFILIATING UNIVERSITY</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMISSION</p>
+	<div class = 'home-dropdown'>
+	<a href="collegeprospectus.html"><p style = 'padding-top: 10px'>›COLLEGE PROSPECTUS</p></a>
+        <a href="procedure.html"><p>›PROCEDURE</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMINSTRATION</p>
+	<div class = 'home-dropdown'>
+	<a href="departmentstaff.html"><p style = 'padding-top: 10px'>›DEPARTMENT STAFF</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+	</div>
+    </div>
+    
+    <div class = 'home'>
+	<p>⏷ACADEMICS</p>
+	<div class = 'home-dropdown'>
+	<a href="academiccalendar.html"><p style = 'padding-top: 10px'>›ACADEMIC CALENDAR</p></a>
+        <a href="syllabus.html"><p>›SYLLABUS</p></a>
+	<a href="timetable.html"><p>›TIME TABLE</p></a>
+	</div>
+    </div>
+
+    
+
+    <div><a href='news.html'>⏷NEWS</a></div>
+
+    <div class = 'home'>
+	<p>⏷GALLERY</p>
+	<div class = 'home-dropdown'>
+	<a href="gallery_council.html"><p style = 'padding-top: 10px'>›SELECTION OF STUDENT COUNCIL</p></a>
+        <a href="gallery_td.html"><p>›TEACHER'S DAY</p></a>
+	<a href="gallery_geo_olympics.html"><p>›GEO-OLYMPICS</p></a>
+	<a href="gallery_geo_time.html"><p>›GEO-TIME</p></a>
+	</div>
+    </div>
+
+    <div><a href='contactus.html'>⏷CONTACT US</a></div>
+</div>
+
+
+<!-- MARQUEE -->
+<div class="marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+        <a href="news.html">Regarding holdiay on 14 April 2026</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+        <a href="news.html">Regarding examination form for even sem</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+        <a href="news.html">Regarding field visit of 3rd year</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+	<a href="news.html">Regarding GEOTIME 2026</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+	<a href="news.html">Notice for 4th Year</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+    </marquee>
+</div>
+
+<!-- 70-30 SECTION -->
+<div class="container">
+
+    <div class="left-section">
+        <img src="gl1.jpeg">
+    </div>
+
+    <div class="right-section">
+        <img src="PXL_20251112_041657698.RAW-01.COVER.jpg.jpeg">
+        <img src="IMG20251118124455.jpg.jpeg">
+        <img src="IMG_20251111_123943146.jpg.jpeg">
+        <img src="4.jpg.jpeg">
+        <img src="5.jpg.jpeg">
+        <img src="6.jpg.jpeg">
+        <img src="7.jpg.jpeg">
+        <img src="8.jpg.jpeg">
+        <img src="9.jpg.jpeg">
+    </div>
+
+</div>
+
+<!-- PRINCIPAL SECTION -->
+<div class="principal-section">
+
+    <div class="principal-left">
+        <img src="13.jpg.jpeg">
+        <h3>Prof. Dinesh Khattar</h3>
+        <p>PRINCIPAL</p>
+    </div>
+
+    <div class="principal-right">
+        <h1>From the Principal's Desk</h1>
+
+        <div class="principal-card">
+            <p>
+            Incepted in 1951, the institution has evolved into a centre of academic excellence.
+            The faculty has consistently nurtured students into responsible and capable individuals.
+            </p>
+
+            <p>
+            As the Principal, I feel honoured to be part of this legacy and remain committed
+            to strengthening the institution further.
+            </p>
+
+            <p><strong>
+            Titanic and Tall<br>
+            With unflinching Wall<br>
+            Shining like a Star<br>
+            No one stands at Par
+            </strong></p>
+        </div>
+
+        <div class="button-group">
+            <a href="#" class="btn">Back to top</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
