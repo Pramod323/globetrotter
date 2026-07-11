@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Geography Department, KMC</title>
+<link rel="icon" type="image/jpg" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        background: #ece2d0;
+    }
+
+    /* Top Navbar */
+    .navbar {
+        background: #6d380c;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+	border-bottom: 1px solid white;
+
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+    .navbar h2 {
+        font-size: 13px;
+        margin: 0;
+    }
+	
+    #logo {
+	width: 70px;
+	height: 70px;
+    }
+
+    #logo2 {
+	width:40px;
+	height:40px;
+	padding:3px;
+   }
+
+   #logo3 {
+	width: 55px;
+	height: 55px;
+    }
+
+    #social_media_handles {
+	padding:20px;
+    }
+
+    .dropdown{
+	margin-left: auto;
+    }
+
+    .dropdown img{
+	cursor: pointer;
+    }
+
+    #dropdown-items div{
+	background: #8D4422;
+        color: white;
+        padding: 6px 60px;
+        font-size: 14px;
+        letter-spacing: 3px;
+	border-bottom: 1px solid white;
+    }
+
+    #dropdown-items div a{
+        color: white;
+        font-size: 14px;
+        letter-spacing: 3px;
+	text-decoration: none;
+    }
+
+    #dropdown-items div p{
+	margin:0;
+    }
+
+    #dropdown-items div a p{
+	padding-left: 40px;
+    }
+
+    #dropdown-items div div {
+	border-bottom: 0px;
+	padding: 0;
+    }
+
+    .home-dropdown {
+	display: none;
+    }
+
+    .home:hover .home-dropdown {
+    	display: block;
+    }
+
+    /* Banner */
+    .banner {
+        background: linear-gradient(to right, #ab6246, #C05746);
+        color: white;
+        padding: 12px 60px;
+        font-size: 28px;
+        letter-spacing: 3px;
+	border-bottom: 1px solid white;
+    }
+
+    .banner p {
+	margin:0;
+	padding-top: 7px;
+    }
+
+    /* Main Layout */
+    .container {
+        display: flex;
+	flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        background: #2c4b5e;
+        color: white;
+	border-radius: 10px;
+	height: min-content;
+	margin-right: 20px;
+	margin-bottom: 20px;
+    }
+
+    .sidebar div {
+        padding: 15px;
+        border-bottom: 1px solid #3e6277;
+    }
+
+    .sidebar a {
+	color: white;
+	text-decoration: none;
+    }
+
+    .sidebar div:hover {
+        background: #3f6b84;
+	cursor: pointer;
+	border-radius: 10px;
+    }
+
+    /* Content */
+    .content {
+	display: flex;
+	flex-wrap: wrap;
+        flex:1;
+        background: white;
+        padding: 30px;
+	border-radius: 20px;
+    }
+
+    .content h2 {
+        margin-top: 0;
+        font-weight: normal;
+    }
+
+    .content p {
+        line-height: 1.6;
+    }
+
+    .content b {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .img {
+	width: 23%;
+	height: auto;
+	border-radius: 20px;
+	padding: 10px;
+	object-fit: cover;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div>
+	<a href='index.html'><img id = 'logo' src='logo_without_bg.png'/></a>
+    </div>
+    <div id='name'>
+	<h1>DEPARTMENT OF GEOGRAPHY,</h1>
+	<h2>KIRORI MAL COLLEGE</h2>
+    </div>
+    <div id='social_media_handles'>
+	<a href='mailto:deptofgeo.kmc@gmail.com'><img id = 'logo2' src='gmail.png'/></a>
+	<a href='https://www.instagram.com/kmc_geography/'><img id = 'logo2' src='insta.webp'/></a>
+	<a href='https://in.linkedin.com/company/geography-kmc'><img id = 'logo2' src='linkedin.png'/></a>
+    </div>
+
+    <div class = 'dropdown'>
+	<img src='hamburger_menu.png' id='logo3' onClick="toggleDropDown()"/>
+    </div>
+</div>
+
+<script>
+    function toggleDropDown() {
+	const dropdown = document.getElementById('dropdown-items');
+        if (dropdown.style.display === 'none') {
+	    dropdown.style.display = 'block'
+	} else {
+	    dropdown.style.display = 'none'
+	};
+    }
+</script>
+
+<div id = 'dropdown-items' style = "display: none">
+    <div class = 'home'>
+	<p>⏷HOME</p>
+	<div class = 'home-dropdown'>
+	<a href="intro_to_department.html"><p style = 'padding-top: 10px'>›INTRODUCTION TO THE GEOGRAPHY DEPARTMENT</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+        <a href="alumni.html"><p>›ALUMNI</p></a>
+        <a href="departmentcrest.html"><p>›DEPARTMENT CREST</p></a>
+        <a href="vision.html"><p>›VISION AND MISSION</p></a>
+        <a href="college.html"><p>›AFFILIATING COLLEGE</p></a>
+        <a href="uni.html"><p>›AFFILIATING UNIVERSITY</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMISSION</p>
+	<div class = 'home-dropdown'>
+	<a href="collegeprospectus.html"><p style = 'padding-top: 10px'>›COLLEGE PROSPECTUS</p></a>
+        <a href="procedure.html"><p>›PROCEDURE</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMINSTRATION</p>
+	<div class = 'home-dropdown'>
+	<a href="departmentstaff.html"><p style = 'padding-top: 10px'>›DEPARTMENT STAFF</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+	</div>
+    </div>
+    
+    <div class = 'home'>
+	<p>⏷ACADEMICS</p>
+	<div class = 'home-dropdown'>
+	<a href="academiccalendar.html"><p style = 'padding-top: 10px'>›ACADEMIC CALENDAR</p></a>
+        <a href="syllabus.html"><p>›SYLLABUS</p></a>
+	<a href="timetable.html"><p>›TIME TABLE</p></a>
+	</div>
+    </div>
+
+    
+
+    <div><a href='news.html'>⏷NEWS</a></div>
+
+    <div class = 'home'>
+	<p>⏷GALLERY</p>
+	<div class = 'home-dropdown'>
+	<a href="gallery_council.html"><p style = 'padding-top: 10px'>›SELECTION OF STUDENT COUNCIL</p></a>
+        <a href="gallery_td.html"><p>›TEACHER'S DAY</p></a>
+	<a href="gallery_geo_olympics.html"><p>›GEO-OLYMPICS</p></a>
+	<a href="gallery_geo_time.html"><p>›GEO-TIME</p></a>
+	</div>
+    </div>
+
+    <div><a href='contactus.html'>⏷CONTACT US</a></div>
+</div>
+
+
+<!-- Banner -->
+<div class="banner">
+    <p>GALLERY - GEO TIME</p>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="gallery_council.html"><div>SELECTION OF STUDENT'S COUNCIL</div></a>
+        <a href="gallery_td.html"><div>TEACHER'S DAY</div></a>
+        <a href="gallery_geo_olympics.html"><div>GEO-OLYMPICS</div></a>
+        <a href="gallery_geo_time.html"><div style="border: 0;">GEO-TIME</div></a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">	
+	<img class='img' src='geo_time_2025/p (1).jpg' />
+	<img class='img' src='geo_time_2025/p (2).jpg' />
+	<img class='img' src='geo_time_2025/p (3).jpg' />
+	<img class='img' src='geo_time_2025/p (4).jpg' />
+	<img class='img' src='geo_time_2025/p (5).jpg' />
+	<img class='img' src='geo_time_2025/p (6).jpg' />
+	<img class='img' src='geo_time_2025/p (7).jpg' />
+<img class='img' src='geo_time_2025/p (8).jpg' />
+<img class='img' src='geo_time_2025/p (9).jpg' />
+<img class='img' src='geo_time_2025/p (10).jpg' />
+<img class='img' src='geo_time_2025/p (11).jpg' />
+<img class='img' src='geo_time_2025/p (12).jpg' />
+<img class='img' src='geo_time_2025/p (13).jpg' />
+<img class='img' src='geo_time_2025/p (14).jpg' />
+<img class='img' src='geo_time_2025/p (15).jpg' />
+<img class='img' src='geo_time_2025/p (16).jpg' />
+<img class='img' src='geo_time_2025/p (17).jpg' />
+<img class='img' src='geo_time_2025/p (18).jpg' />
+<img class='img' src='geo_time_2025/p (19).jpg' />
+<img class='img' src='geo_time_2025/p (20).jpg' />
+<img class='img' src='geo_time_2025/p (21).jpg' />
+<img class='img' src='geo_time_2025/p (22).jpg' />
+<img class='img' src='geo_time_2025/p (23).jpg' />
+<img class='img' src='geo_time_2025/p (24).jpg' />
+<img class='img' src='geo_time_2025/p (25).jpg' />
+<img class='img' src='geo_time_2025/p (26).jpg' />
+<img class='img' src='geo_time_2025/p (27).jpg' />
+<img class='img' src='geo_time_2025/p (28).jpg' />
+<img class='img' src='geo_time_2025/p (29).jpg' />
+<img class='img' src='geo_time_2025/p (30).jpg' />
+<img class='img' src='geo_time_2025/p (31).jpg' />
+<img class='img' src='geo_time_2025/p (32).jpg' />
+<img class='img' src='geo_time_2025/p (33).jpg' />
+<img class='img' src='geo_time_2025/p (34).jpg' />
+<img class='img' src='geo_time_2025/p (35).jpg' />
+<img class='img' src='geo_time_2025/p (36).jpg' />
+<img class='img' src='geo_time_2025/p (37).jpg' />
+<img class='img' src='geo_time_2025/p (38).jpg' />
+<img class='img' src='geo_time_2025/p (39).jpg' />
+<img class='img' src='geo_time_2025/p (40).jpg' />
+<img class='img' src='geo_time_2025/p (41).jpg' />
+<img class='img' src='geo_time_2025/p (42).jpg' />
+<img class='img' src='geo_time_2025/p (43).jpg' />
+<img class='img' src='geo_time_2025/p (44).jpg' />
+<img class='img' src='geo_time_2025/p (45).jpg' />
+<img class='img' src='geo_time_2025/p (46).jpg' />
+<img class='img' src='geo_time_2025/p (47).jpg' />
+<img class='img' src='geo_time_2025/p (48).jpg' />
+<img class='img' src='geo_time_2025/p (49).jpg' />
+<img class='img' src='geo_time_2025/p (50).jpg' />
+<img class='img' src='geo_time_2025/p (51).jpg' />
+<img class='img' src='geo_time_2025/p (52).jpg' />
+    </div>
+
+</div>
+
+</body>
+</html>

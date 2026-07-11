@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Geography Department, KMC</title>
+<link rel="icon" type="image/jpg" href="logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        background: #ece2d0;
+    }
+
+    /* Top Navbar */
+    .navbar {
+        background: #6d380c;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+	border-bottom: 1px solid white;
+
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+    .navbar h2 {
+        font-size: 13px;
+        margin: 0;
+    }
+	
+    #logo {
+	width: 70px;
+	height: 70px;
+    }
+
+    #logo2 {
+	width:40px;
+	height:40px;
+	padding:3px;
+   }
+
+   #logo3 {
+	width: 55px;
+	height: 55px;
+    }
+
+    #social_media_handles {
+	padding:20px;
+    }
+
+    .dropdown{
+	margin-left: auto;
+    }
+
+    .dropdown img{
+	cursor: pointer;
+    }
+
+    #dropdown-items div{
+	background: #8D4422;
+        color: white;
+        padding: 6px 60px;
+        font-size: 14px;
+        letter-spacing: 3px;
+	border-bottom: 1px solid white;
+    }
+
+    #dropdown-items div a{
+        color: white;
+        font-size: 14px;
+        letter-spacing: 3px;
+	text-decoration: none;
+    }
+
+    #dropdown-items div p{
+	margin:0;
+    }
+
+    #dropdown-items div a p{
+	padding-left: 40px;
+    }
+
+    #dropdown-items div div {
+	border-bottom: 0px;
+	padding: 0;
+    }
+
+    .home-dropdown {
+	display: none;
+    }
+
+    .home:hover .home-dropdown {
+    	display: block;
+    }
+
+    /* Banner */
+    .banner {
+        background: linear-gradient(to right, #ab6246, #C05746);
+        color: white;
+        padding: 12px 60px;
+        font-size: 28px;
+        letter-spacing: 3px;
+	border-bottom: 1px solid white;
+    }
+
+    .banner p {
+	margin:0;
+	padding-top: 7px;
+    }
+
+    /* Main Layout */
+    .container {
+        display: flex;
+	flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 350px;
+        background: #2c4b5e;
+        color: white;
+	border-radius: 10px;
+	height: min-content;
+	margin-right: 20px;
+	margin-bottom: 20px;
+    }
+
+    .sidebar a {
+	color: white;
+	text-decoration: none;
+    }
+
+    .sidebar div {
+        padding: 15px;
+        border-bottom: 1px solid #3e6277;
+    }
+
+    .sidebar div:hover {
+        background: #3f6b84;
+	cursor: pointer;
+	border-radius: 10px;
+    }
+
+    /* Content */
+    .content {
+        flex: 1;
+        background: white;
+        padding: 30px;
+	border-radius: 20px;
+    }
+
+    .content h2 {
+        margin-top: 0;
+        font-weight: normal;
+    }
+
+    .content p {
+        line-height: 1.6;
+    }
+
+    .content b {
+        display: block;
+        margin-top: 15px;
+    }
+        .alumni {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 25px;
+	}
+    .alumni div {
+	text-align: center;
+	margin-left: 20px;
+	}
+    .alphoto {
+	display: flex;
+	flex-wrap: warp;
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	padding-left: 10px;
+	border: 10px solid transparent;
+	padding: 1px;
+	border-image: url(border.png) 25 round;
+	}
+
+     .alumni_div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+     }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div>
+	<a href='index.html'><img id = 'logo' src='logo_without_bg.png'/></a>
+    </div>
+    <div id='name'>
+	<h1>DEPARTMENT OF GEOGRAPHY,</h1>
+	<h2>KIRORI MAL COLLEGE</h2>
+    </div>
+    <div id='social_media_handles'>
+	<a href='mailto:deptofgeo.kmc@gmail.com'><img id = 'logo2' src='gmail.png'/></a>
+	<a href='https://www.instagram.com/kmc_geography/'><img id = 'logo2' src='insta.webp'/></a>
+	<a href='https://in.linkedin.com/company/geography-kmc'><img id = 'logo2' src='linkedin.png'/></a>
+    </div>
+
+    <div class = 'dropdown'>
+	<img src='hamburger_menu.png' id='logo3' onClick="toggleDropDown()"/>
+    </div>
+</div>
+
+<script>
+    function toggleDropDown() {
+	const dropdown = document.getElementById('dropdown-items');
+        if (dropdown.style.display === 'none') {
+	    dropdown.style.display = 'block'
+	} else {
+	    dropdown.style.display = 'none'
+	};
+    }
+</script>
+
+<div id = 'dropdown-items' style = "display: none">
+    <div class = 'home'>
+	<p>⏷HOME</p>
+	<div class = 'home-dropdown'>
+	<a href="intro_to_department.html"><p style = 'padding-top: 10px'>›INTRODUCTION TO THE GEOGRAPHY DEPARTMENT</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+        <a href="alumni.html"><p>›ALUMNI</p></a>
+        <a href="departmentcrest.html"><p>›DEPARTMENT CREST</p></a>
+        <a href="vision.html"><p>›VISION AND MISSION</p></a>
+        <a href="college.html"><p>›AFFILIATING COLLEGE</p></a>
+        <a href="uni.html"><p>›AFFILIATING UNIVERSITY</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMISSION</p>
+	<div class = 'home-dropdown'>
+	<a href="collegeprospectus.html"><p style = 'padding-top: 10px'>›COLLEGE PROSPECTUS</p></a>
+        <a href="procedure.html"><p>›PROCEDURE</p></a>
+	</div>
+    </div>
+
+    <div class = 'home'>
+	<p>⏷ADMINSTRATION</p>
+	<div class = 'home-dropdown'>
+	<a href="departmentstaff.html"><p style = 'padding-top: 10px'>›DEPARTMENT STAFF</p></a>
+        <a href="council.html"><p>›DEPARTMENT COUNCIL</p></a>
+	</div>
+    </div>
+    
+    <div class = 'home'>
+	<p>⏷ACADEMICS</p>
+	<div class = 'home-dropdown'>
+	<a href="academiccalendar.html"><p style = 'padding-top: 10px'>›ACADEMIC CALENDAR</p></a>
+        <a href="syllabus.html"><p>›SYLLABUS</p></a>
+	<a href="timetable.html"><p>›TIME TABLE</p></a>
+	</div>
+    </div>
+
+    
+
+    <div><a href='news.html'>⏷NEWS</a></div>
+
+    <div class = 'home'>
+	<p>⏷GALLERY</p>
+	<div class = 'home-dropdown'>
+	<a href="gallery_council.html"><p style = 'padding-top: 10px'>›SELECTION OF STUDENT COUNCIL</p></a>
+        <a href="gallery_td.html"><p>›TEACHER'S DAY</p></a>
+	<a href="gallery_geo_olympics.html"><p>›GEO-OLYMPICS</p></a>
+	<a href="gallery_geo_time.html"><p>›GEO-TIME</p></a>
+	</div>
+    </div>
+
+    <div><a href='contactus.html'>⏷CONTACT US</a></div>
+</div>
+
+
+<!-- Banner -->
+<div class="banner">
+    <p>HOME</p>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="intro_to_department.html"><div>INTRODUCTION TO THE GEOGRAPHY DEPARTMENT</div></a>
+        <a href="council.html"><div>DEPARTMENT COUNCIL</div></a>
+        <a href="alumni.html"><div>ALUMNI</div></a>
+        <a href="departmentcrest.html"><div>DEPARTMENT CREST</div></a>
+        <a href="vision.html"><div>VISION AND MISSION</div></a>
+        <a href="college.html"><div>AFFILIATING COLLEGE</div></a>
+        <a href="uni.html"><div style="border: 0;">AFFILIATING UNIVERSITY</div></a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>ALUMNI</h2>
+        <hr>
+<p>Department of geography has a wide network of its alumni because of many years of establishment, hardwork of staff and students. Some of the prominent of the same are as follows:</p>
+	<div class = "alumni_div">
+	<div class="alumni">
+
+		<div>
+			<img class="alphoto" src="sagar.png">
+			<div><b>Shri Anmol Sagar </br> IAS</b>Batch 2013-16</div>
+		</div>
+
+		<div>
+			<img class="alphoto" src="rathore.jpg.jpeg">
+			<div><b>Shri Sandeep Rai Rathore </br> IPS </b> DGP, Tamil Nadu</div>
+		</div>
+
+		<div>
+			<img  class="alphoto" src="anand.png">
+			<div><b>Mr. Ishitwa Anand </br>IAS</b> Batch 2021-24</div>
+		</div>
+	</div>
+
+	<div class="alumni">
+		<div>
+			<img  class="alphoto" src="kaushal.png">
+			<div><b>Prof. Kaushal Kumar Sharma </br> Chairperson, CSRD </b> JNU</div>
+		</div>
+		
+		<div>
+			<img  class="alphoto" src="dwivedi.png">
+				<div><b>Mr. Shreyash Dwivedi </br> Consultant, NIDM </b>Delhi</div>
+		</div>
+ 
+		<div>
+			<img  class="alphoto" src="mishra.png">
+			<div><b>Shri Shubham Mishra </br> SPA </b> Delhi</div>
+		</div>
+	</div>
+	</div>
+    </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
